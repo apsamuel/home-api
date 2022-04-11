@@ -1,0 +1,26 @@
+{
+  "name": "@apsamuel/home-api",
+  "version": "1.0.0",
+  "description": "API backend for home site",
+  "main": "index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apsamuel/home-api"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/aaronpsamuel"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aaron.psamuel@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@apsamuel/home-data": "^1.0.1",
+    "@octokit/rest": "^18.12.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-cors": "^0.0.3"
+  }
+}
