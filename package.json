@@ -1,7 +1,7 @@
 {
   "name": "@apsamuel/home-api",
-  "version": "1.0.0",
-  "description": "API backend for home site",
+  "version": "1.0.1",
+  "description": "General API backend for home site",
   "main": "index.js",
   "type": "module",
   "repository": {
@@ -19,6 +19,7 @@
   "dependencies": {
     "@apsamuel/home-data": "^1.0.1",
     "@octokit/rest": "^18.12.0",
+    "chalk": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "express-cors": "^0.0.3"
