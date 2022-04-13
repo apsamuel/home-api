@@ -5,14 +5,14 @@ import {
   deleteItem
 } from '../lib/Dynamo.js'
 
-// import { workHistory } from './workHistory.js'
-import { workHistory } from '../lib/workHistory.js'
+// import { resumeWorkHistory } from './resumeWorkHistory.js'
+import { resumeWorkHistory } from '../lib/resumeWorkHistory.js'
 import { randomUUID } from 'crypto'
 
-const resumeWorkHistory = workHistory()
+const workHistoryItems = resumeWorkHistory()
 const TableName = 'workHistory'
 
-for (const workHistoryItem of resumeWorkHistory) {
+for (const workHistoryItem of workHistoryItems) {
   const companyId = randomUUID()
   const companyName = workHistoryItem.companyName
   const companyRoles = workHistoryItem.companyRoles.map(role => {
