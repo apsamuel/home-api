@@ -1,0 +1,26 @@
+[
+  {
+    "schoolName": "A. Phillip Randolph",
+    "schoolType": "High School",
+    "schoolMajor": "Math & Sciences",
+    "schoolStartYear": "1996",
+    "schoolEndYear": "2000",
+    "completionType": "High School Diploma"
+  },
+  {
+    "schoolName": "ASA College For Excellence",
+    "schoolType": "College",
+    "schoolMajor": "Computer Science",
+    "schoolStartYear": "2003",
+    "schoolEndYear": "2005",
+    "completionType": "Associates in Applied Science"
+  },
+  {
+    "schoolName": "Laguardia Community College",
+    "schoolType": "College",
+    "schoolMajor": "Biology",
+    "schoolStartYear": "2015",
+    "schoolEndYear": false,
+    "completionType": "Associates in Applied Science"
+  }
+]
