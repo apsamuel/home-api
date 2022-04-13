@@ -1,4 +1,3 @@
-// import { argv } from process
 import { Command } from 'commander'
 
 import {
@@ -51,17 +50,6 @@ program.command('dump')
       }
     }
 
-    // console.log('the string is')
-    // console.log(str)
-    // console.log('the options are')
-    // console.log(options)
   })
 
 program.parse()
-
-// console.log(process.argv)
-// if (process.argv[1] === '' || process.argv.length < 2) {
-//   console.log(`please supply an argument which is one of ${possibleOutputs}`)
-// }
-
-// const arguments = process.argv
