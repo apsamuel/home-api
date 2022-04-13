@@ -2,9 +2,66 @@
 
 A simple API based on express that provides any **basic** data rendered on the `home` site
 
-## Schemas
+## TODOs
 
-- workHistory (persisted to DynamoDB)
+[ ] - allow fields to be nullable so they won't be shown when rendered
+
+## Data Schemas
+
+This data is static because it's not bound to change much
+
+- resumeGeneralInfo
+
+```javascript
+    {
+        infoName: '(String) your name',
+        infoGenderPronouns: [
+        '(String) pronouns',
+        '...',
+        ],
+        infoSex: '(String) sex',
+        infoBirthdate: '(String) birthday',
+        infoTitle: '(String) professional title',
+        infoLocation: '(String) city, state',
+        infoCovid19Vaccination: '(Boolean) fully vaccinated or nah?',
+        infoCovid19VaccinationBooster: '(Boolean) boosted or nah?',
+    }
+```
+
+- resumeEducationHistory
+
+```javascript
+    [
+        {
+            schoolName: '(String) the school name',
+            schoolType: '(String) the school type',
+            schoolMajor: '(String) major focus of study',
+            schoolStartYear: '(String) start year',
+            schoolEndYear: '(String) end year',
+            completionType: '(String) degree, diploma, award, or certificate received',
+        },
+    ]
+```
+
+- resumeSkillInfo
+
+```javascript
+    [
+        {
+            skillName: '(String) what skill do you have?',
+            skillDescription:
+                '(String) describe the skill',
+            skillRating: '(Number) rate from 1-10 your skill level',
+            skillExperienceYears: '(Number) provide how many years experience you have with this skill',
+        },
+    ]
+```
+
+## DynamoDB Schemas
+
+This data is stored in DynamoDB to allow real CRUD, work history updates over time.
+
+- resumeWorkHistory
 
 ```js
     {
@@ -59,21 +116,4 @@ A simple API based on express that provides any **basic** data rendered on the `
         },
       ],
     },
-```
-
-educationHistory (retuns data from `educationHistory()` function, save money)
-
-```javascript
-    [
-        {
-            schoolName: '(String) the school name',
-            schoolType: '(String) the school type',
-            schoolMajor: '(String) major focus of study',
-            schoolStartYear: '(String) start year',
-            schoolEndYear: '(String) end year',
-            completionType: 'High School Diploma',
-        },
-    ]
-
-
 ```
