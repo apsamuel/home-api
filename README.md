@@ -5,6 +5,7 @@ A simple API based on express that provides any **basic** data rendered on the `
 ## TODOs
 
 [ ] - allow fields to be nullable so they won't be shown when rendered
+[ ] - allow date fields to `end` with false, indicating a position or education is continuing/current
 
 ## Data Schemas
 
