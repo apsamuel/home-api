@@ -5,7 +5,6 @@ import {
   deleteItem
 } from '../lib/Dynamo.js'
 
-// import { resumeWorkHistory } from './resumeWorkHistory.js'
 import { resumeWorkHistory } from '../lib/resumeWorkHistory.js'
 import { randomUUID } from 'crypto'
 
@@ -16,10 +15,19 @@ for (const workHistoryItem of workHistoryItems) {
   const companyId = randomUUID()
   const companyName = workHistoryItem.companyName
   const companyRoles = workHistoryItem.companyRoles.map(role => {
+    const { roleStartDay, roleStartMonth, roleStartYear, roleEndDay, roleEndMonth, roleEndYear } = role
+    const roleStartDate = `${roleStartYear}-${roleStartMonth}-${roleStartDay}`
+    const isBool = (val) => val.constructor.name !== 'Number'
+
+    const containsBooleans = [ roleEndDay, roleEndMonth, roleEndYear ].some(isBool)
+    console.log(role.roleName + " contains bools? " + containsBooleans)
+    // add IDs for roles within companies
+    const roleId = randomUUID()
     return {
+      roleId,
       ...role,
-      roleStartDate: `${role.roleStartYear}-${role.roleStartMonth}-${role.roleStartDay}`,
-      roleEndDate: `${role.roleEndYear}-${role.roleEndMonth}-${role.roleEndDay}`,
+      roleStartDate,
+      roleEndDate: containsBooleans ? 'current' : `${role.roleEndYear}-${role.roleEndMonth}-${role.roleEndDay}`,
     };
   })
 
@@ -46,4 +54,3 @@ for (const workHistoryItem of workHistoryItems) {
   })
 
 }
-// console.log(workHistory())

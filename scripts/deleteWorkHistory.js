@@ -1,12 +1,12 @@
 import { getItem, getItems, putItem, deleteItem } from '../lib/Dynamo.js';
 
 
-const TableName = 'workHistory';
-const workHistoryItems = await getItems({ TableName });
+const tableName = 'workHistory';
+const workHistoryItems = await getItems( tableName );
 
 for (const workHistoryItem of workHistoryItems) {
-  const companyId = workHistoryItem.companyId.S
-  const companyName = workHistoryItem.companyName.S
+  const companyId = workHistoryItem.companyId
+  const companyName = workHistoryItem.companyName
   console.log({
     step: 'deleteItem',
     companyId,
