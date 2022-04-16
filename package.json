@@ -12,12 +12,14 @@
     "registry": "https://npm.pkg.github.com/aaronpsamuel"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wipeResumeData": "/Users/aaronsamuel/devops/node/node-v16.13.2-darwin-x64/bin/n exec auto node ./scripts/deleteWorkHistory.js",
+    "seedResumeData": "/Users/aaronsamuel/devops/node/node-v16.13.2-darwin-x64/bin/n exec auto node ./scripts/seedWorkHistory.js"
   },
   "author": "aaron.psamuel@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "@apsamuel/home-data": "^1.0.1",
+    "@apsamuel/home-data": "^1.0.3",
     "@octokit/rest": "^18.12.0",
     "aws-sdk": "^2.1112.0",
     "chalk": "^5.0.1",
