@@ -5,7 +5,7 @@ A simple API based on express that provides any **basic** data rendered on the `
 ## TODOs
 
 [ ] - allow fields to be nullable so they won't be shown when rendered
-[ ] - allow date fields to `end` with false, indicating a position or education is continuing/current
+[x] - allow date fields to `end` with false, indicating a position or education is continuing/current
 
 ## Data Schemas
 
@@ -117,4 +117,19 @@ This data is stored in DynamoDB to allow real CRUD, work history updates over ti
         },
       ],
     },
+```
+
+## Dockerfile
+
+- For testing and development, a `Dockerfile` is included to quickly run a containerized version of the API service.
+- After a `docker build` you can run the image like so:
+
+```sh
+docker run \
+-it \
+-v $HOME/.aws /root/.aws \
+-e AWS_PROFILE=YOUR_AWS_PROFILE \
+-e AWS_REGION=YOUR_AWS_REGION \
+-p 8081:8081 \
+homeapi:latest
 ```
