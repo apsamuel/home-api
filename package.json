@@ -19,7 +19,7 @@
   "author": "aaron.psamuel@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "@apsamuel/home-data": "^1.0.3",
+    "@apsamuel/home-data": "^1.0.4",
     "@octokit/rest": "^18.12.0",
     "aws-sdk": "^2.1112.0",
     "chalk": "^5.0.1",
