@@ -1,6 +1,6 @@
 {
   "name": "@apsamuel/home-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "General API backend for home site",
   "main": "index.js",
   "type": "module",
