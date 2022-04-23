@@ -19,13 +19,14 @@
   "author": "aaron.psamuel@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "@apsamuel/home-data": "^1.0.4",
+    "@apsamuel/home-data": "^1.0.8",
     "@octokit/rest": "^18.12.0",
     "aws-sdk": "^2.1112.0",
     "chalk": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.3",
-    "express-cors": "^0.0.3"
+    "express-cors": "^0.0.3",
+    "mime-types": "^2.1.35"
   },
   "devDependencies": {
     "commander": "^9.1.0"
